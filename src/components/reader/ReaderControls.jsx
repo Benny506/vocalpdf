@@ -37,7 +37,12 @@ const ReaderControls = () => {
     };
 
     return (
-        <div className="reader-controls fixed-bottom bg-white border-top shadow-lg p-3 py-lg-4" style={{ zIndex: 1000 }}>
+        <motion.div 
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="reader-controls fixed-bottom mx-auto mb-4 glass-panel rounded-5 shadow-2xl p-3 py-lg-4" 
+            style={{ zIndex: 1000, maxWidth: '900px', width: '95%' }}
+        >
             <div className="container">
                 <div className="row align-items-center g-3">
                     {/* Progress Indicator */}
@@ -141,7 +146,7 @@ const ReaderControls = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

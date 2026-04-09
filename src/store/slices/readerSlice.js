@@ -2,9 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     document: {
+        id: null, // Database UUID for persistence
         name: '',
         size: 0,
         totalPages: 0,
+        totalSentences: 0,
     },
     pagesSource: [], // Raw text per page
     sentences: [], // Cleaned chunks for speech
